@@ -1,0 +1,12 @@
+[
+    {
+        "context": [
+            "/tags",
+            "/profiles",
+            "/articles",
+            "/comments"
+        ],
+        "target": "http://localhost:3000",
+        "secure": false
+    }
+]
