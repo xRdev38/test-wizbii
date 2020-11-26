@@ -3,16 +3,19 @@ import { Observable } from 'rxjs';
 
 import { ApiService } from './api.service';
 import { Tag } from '@app/core/models';
-import { map } from 'rxjs/operators';
 
-@Injectable({ providedIn: 'root', })
+@Injectable()
 export class TagsService {
   constructor (
     private apiService: ApiService
   ) {}
 
-  getAll(): Observable<[Tag]> {
+  getAll(): Observable<Tag[]> {
     return this.apiService.get('/tags');
+  }
+
+  getById(id: string): Observable<Tag>{
+    return this.apiService.get(`/tags/${id}`);
   }
 
 }
