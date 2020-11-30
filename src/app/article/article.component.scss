@@ -1,0 +1,43 @@
+app-article {
+  display: block;
+}
+
+.btn-arrow {
+  color: #9da1a3;
+  cursor: pointer;
+}
+
+.article {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.article-tag {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #545d61;
+}
+
+.article-content {
+  padding: 10px;
+  line-height: 42px;
+  color: #545d61;
+}
+
+.article-action {
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.article-tag {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #545d61;
+}

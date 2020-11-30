@@ -1,0 +1,41 @@
+<ng-container *ngIf="article">
+	<div class="article">
+		<div class="article-head row">
+			<div class="col-md-auto">
+				<div class="circle">
+				</div>
+			</div>
+			<div class="col">
+				<!--
+          <app-article-meta [profile]=""></app-article-meta>
+      -->
+			</div>
+			<div class="col col-lg-1">
+				<div class="btn-arrow">
+					<i class="fas fa-angle-down"></i>
+				</div>
+			</div>
+		</div>
+		<div class="article-tag">
+      <!--
+			<app-article-tag-list [tags]=""></app-article-tag-list>
+       -->
+		</div>
+		<div class="article-content">
+			{{ article.body }}
+		</div>
+		<div class="article-action">
+			<app-share-button></app-share-button>
+			<app-thanx-button></app-thanx-button>
+		</div>
+		<div class="article-comment">
+			<span>{{ stringComment }}</span> - <span>{{ article.thanxCount }} thanx</span>
+			<hr class="separator" />
+      <!--
+			<app-comment>
+			</app-comment>
+      -->
+			<app-comment-form></app-comment-form>
+		</div>
+	</div>
+</ng-container>
