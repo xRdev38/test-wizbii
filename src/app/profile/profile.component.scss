@@ -1,0 +1,61 @@
+app-profile {
+  display: block;
+}
+
+.header {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.header-title {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  color: #1ba3e1;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-help,
+.btn-share-article {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #9da1a3;
+}
+
+.btn-help {
+  margin-left: 2.5em;
+}
+
+.btn-share-article {
+  margin-right: 2.5em;
+}
+
+.btn-help > i,
+.btn-share-article > i {
+  font-size: 36px;
+  color: #d9d9d9;
+}
+
+.btn-help > span,
+.btn-share-article > span {
+  margin-left: 10px;
+}
+
+.btn-help:hover,
+.btn-share-article:hover {
+  color: #1ba3e1;
+}
+
+.btn-help:hover > i,
+.btn-share-article:hover {
+  color: #1ba3e1;
+}
