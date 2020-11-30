@@ -1,5 +1,5 @@
 {
-  "profiles": [
+ "profiles": [
    {
       "id": "666",
       "firstname":"Serge",
@@ -253,7 +253,9 @@
       ],
       "createdAt":"2020-11-09T19:20+01:00",
       "updatedAt":"",
-      "profile":"666"
+      "profile":"666",
+      "thanx": true,
+      "thanxCount": 0
    },
    {
       "id":"2",
@@ -267,7 +269,9 @@
       ],
       "createdAt":"",
       "updatedAt":"2020-11-25T19:20+01:00",
-      "profile":"645654"
+      "profile":"645654",
+      "thanx": true,
+      "thanxCount": 1
    }
  ],
  "comments" : [
