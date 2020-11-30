@@ -1,0 +1,9 @@
+app-comment {
+  display: block;
+}
+
+.comment-content {
+  margin-left: 50px;
+  padding: 0 10px;
+  color: #545d61;
+}

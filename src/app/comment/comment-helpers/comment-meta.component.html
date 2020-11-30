@@ -1,0 +1,10 @@
+<ng-container *ngIf="meta">
+	<div class="comment-header">
+		<div class="avatar">
+			<img [src]="meta.image" />
+    </div>
+			<div class="profile-name">
+				<strong>{{ meta.firstname }} {{ meta.lastname }}</strong>
+			</div>
+		</div>
+</ng-container>
