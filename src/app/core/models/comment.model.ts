@@ -1,6 +1,6 @@
 import { Profile } from "./profile.model";
 
-export interface Comment {
+export interface IComment {
   id: string;
   body: string;
   createdAt: string;
