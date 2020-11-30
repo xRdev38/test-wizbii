@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiService } from './api.service';
-import { Tag } from '@app/core/models';
+import { ITag } from '@app/core/models';
 
 @Injectable()
 export class TagsService {
@@ -10,11 +10,11 @@ export class TagsService {
     private apiService: ApiService
   ) {}
 
-  getAll(): Observable<Tag[]> {
+  getAll(): Observable<ITag[]> {
     return this.apiService.get('/tags');
   }
 
-  getById(id: string): Observable<Tag>{
+  getById(id: string): Observable<ITag>{
     return this.apiService.get(`/tags/${id}`);
   }
 

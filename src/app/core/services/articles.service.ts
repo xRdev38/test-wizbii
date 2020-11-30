@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiService } from './api.service';
-import { Article } from '@app/core/models';
+import { IArticle } from '@app/core/models';
 
 @Injectable()
 export class ArticlesService {
 
   constructor(private apiService: ApiService){}
 
-  getAll(): Observable<Article[]> {
+  getAll(): Observable<IArticle[]> {
     return this.apiService.get('/articles');
   }
 
-  getById(id: string): Observable<Article> {
+  getById(id: string): Observable<IArticle> {
     return this.apiService.get(`/articles/${id}`);
   }
 }

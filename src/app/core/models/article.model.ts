@@ -1,4 +1,4 @@
-import { Profile } from "./profile.model";
+import { IProfile } from "./profile.model";
 
 export interface IArticle {
   id: string;
@@ -10,5 +10,5 @@ export interface IArticle {
   updatedAt: string;
   thanx: boolean;
   thanxCount: number;
-  author: Profile;
+  author: IProfile;
 }

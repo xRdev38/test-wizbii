@@ -4,7 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {
   ApiService,
-  TagsService
+  TagsService,
+  CommentsService,
+  ProfilesService,
+  ArticlesService,
 } from './services';
 
 @NgModule({
@@ -14,7 +17,10 @@ import {
   ],
   providers: [
     ApiService,
-    TagsService
+    TagsService,
+    CommentsService,
+    ProfilesService,
+    ArticlesService,
   ],
   declarations: []
 })

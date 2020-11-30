@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ApiService } from './api.service';
-import { Profile } from '@app/core/models';
+import { IProfile } from '@app/core/models';
 
 @Injectable()
 export class ProfilesService {
   constructor(private apiService: ApiService){}
 
-  getAll(): Observable<Profile[]>{
+  getAll(): Observable<IProfile[]>{
     return this.apiService.get('/profiles');
   }
 
-  getById(id: string): Observable<Profile>{
+  getById(id: string): Observable<IProfile>{
     return this.apiService.get(`/profiles/${id}`);
   }
 }

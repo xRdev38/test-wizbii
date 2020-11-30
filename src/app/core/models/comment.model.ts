@@ -1,4 +1,4 @@
-import { Profile } from "./profile.model";
+import { IProfile } from "./profile.model";
 
 export interface IComment {
   id: string;
@@ -6,5 +6,5 @@ export interface IComment {
   createdAt: string;
   thanx: boolean;
   thanxCount: number;
-  author: Profile;
+  author: IProfile;
 }
