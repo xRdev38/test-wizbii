@@ -1,0 +1,17 @@
+<ng-container *ngIf="profile">
+	<div class="profile">
+		<div class="avatar">
+			<img [src]="profile.image"
+  />
+    </div>
+			<div class="profile-desc">
+				<div class="profile-name">
+					<strong>{{ profile.firstname}} {{ profile.lastname }}</strong>
+					- <span>il y a {{ profile.createdAt | date:'H'}} heures</span>
+				</div>
+				<div class="profile-info">
+					{{ profile.desc }}
+				</div>
+			</div>
+		</div>
+</ng-container>

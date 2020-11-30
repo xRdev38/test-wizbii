@@ -1,0 +1,21 @@
+app-article-meta {
+  display: block;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-desc {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  color: #9da1a3;
+}
+
+.profile-name > strong {
+  text-transform: uppercase;
+  color: #1ba3e1;
+}
