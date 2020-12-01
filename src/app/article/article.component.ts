@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from "@angular/core";
 
-import {
-  IArticle,
-} from '@app/core';
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+
+import { ProfilesService } from '@app/core';
+import { IArticleView } from '@app/article/article-view.interface';
 
 @Component({
   selector: "app-article",
@@ -10,14 +12,5 @@ import {
   styleUrls: ["./article.component.scss"]
 })
 export class ArticleComponent implements OnInit {
-  @Input() article: IArticle | null = null;
-  stringComment = "";
-
-  ngOnInit(): void {
-    this.stringComment = this.article !== null ? this.getNumberOfComment(this.article.commentList.length) : this.stringComment;
-  }
-
-  getNumberOfComment(count: Number): string {
-    return count > 1 ? `${count} commentaires` : `${count} commentaire`;
-  }
+  @Input() dataView: IArticleView | null = null;
 }

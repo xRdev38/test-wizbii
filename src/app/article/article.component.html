@@ -1,40 +1,40 @@
-<ng-container *ngIf="article">
+<ng-container *ngIf="dataView">
 	<div class="article">
 		<div class="article-head row">
 			<div class="col-md-auto">
 				<div class="circle">
 				</div>
 			</div>
-			<div class="col">
-				<!--
-          <app-article-meta [profile]=""></app-article-meta>
-      -->
+			<div class="col col">
+        <ng-container *ngIf="dataView.author | async; let profile">
+            <app-article-meta [profile]="profile"></app-article-meta>
+        </ng-container>
 			</div>
-			<div class="col col-lg-1">
+			<div class="col col-sm-1">
 				<div class="btn-arrow">
 					<i class="fas fa-angle-down"></i>
 				</div>
 			</div>
 		</div>
 		<div class="article-tag">
-      <!--
-			<app-article-tag-list [tags]=""></app-article-tag-list>
-       -->
+      <ng-container *ngIf="dataView.tagList | async; let tags">
+			  <app-article-tag-list [tags]="tags"></app-article-tag-list>
+      </ng-container>
 		</div>
 		<div class="article-content">
-			{{ article.body }}
+			{{ dataView.body }}
 		</div>
 		<div class="article-action">
 			<app-share-button></app-share-button>
 			<app-thanx-button></app-thanx-button>
 		</div>
 		<div class="article-comment">
-			<span>{{ stringComment }}</span> - <span>{{ article.thanxCount }} thanx</span>
-			<hr class="separator" />
-      <!--
-			<app-comment>
-			</app-comment>
-      -->
+      <ng-container *ngIf="dataView.comments | async; let comments">
+        <span>{{ comments.length }} commentaire<ng-container *ngIf="comments.length > 1">s</ng-container></span> - <span>{{ dataView.thanxCount }} thanx</span>
+        <hr class="separator" />
+        <app-comment [comments]="comments">
+        </app-comment>
+      </ng-container>
 			<app-comment-form></app-comment-form>
 		</div>
 	</div>
