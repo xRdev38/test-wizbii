@@ -1,13 +1,6 @@
 import { Component, Input } from "@angular/core";
 
-interface IProfileView {
-  id: string;
-  firstname: string;
-  lastname: string;
-  desc: string;
-  image: string;
-  createdAt: string;
-}
+import { IProfileView } from './profile-view.interface';
 
 @Component({
   selector: "app-article-meta",
@@ -23,5 +16,4 @@ export class ArticleMetaComponent {
     image: "",
     createdAt: ""
   };
-
 }
