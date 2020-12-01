@@ -1,14 +1,11 @@
-import { IProfile } from "./profile.model";
-
 export interface IArticle {
-  id: string;
+  id: number;
   description: string;
   body: string;
-  tagList: string[];
-  commentList: string[];
+  tagList: number[];
   createdAt: string;
   updatedAt: string;
   thanx: boolean;
   thanxCount: number;
-  author: IProfile;
+  profileId: number;
 }

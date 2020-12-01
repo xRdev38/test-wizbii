@@ -1,5 +1,5 @@
 export interface IProfile {
-  id: string;
+  id: number;
   firstname: string;
   lastname: string;
   desc: string;

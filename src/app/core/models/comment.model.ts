@@ -1,10 +1,11 @@
 import { IProfile } from "./profile.model";
 
 export interface IComment {
-  id: string;
+  id: number;
+  postId: number;
   body: string;
   createdAt: string;
   thanx: boolean;
   thanxCount: number;
-  author: IProfile;
+  profileId: number;
 }
