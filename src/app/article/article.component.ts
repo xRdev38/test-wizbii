@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -11,6 +11,6 @@ import { IArticleView } from '@app/article/article-view.interface';
   templateUrl: "./article.component.html",
   styleUrls: ["./article.component.scss"]
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent {
   @Input() dataView: IArticleView | null = null;
 }
