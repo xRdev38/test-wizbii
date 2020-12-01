@@ -16,7 +16,8 @@ import { AppComponent } from './app.component';
     CoreModule,
     SharedModule,
     CommentModule,
-    ProfileModule
+    ProfileModule,
+    ArticleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
