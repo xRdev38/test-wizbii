@@ -13,7 +13,11 @@ export class CommentsService {
     return this.apiService.get('/comments');
   }
 
-  getById(id: string): Observable<IComment> {
+  getById(id: number): Observable<IComment> {
     return this.apiService.get(`/comments/${id}`);
+  }
+
+  filterComments(comments: Array<IComment>, id: number): Array<IComment> {
+    return comments.filter(comment => comment.id === id);
   }
 }

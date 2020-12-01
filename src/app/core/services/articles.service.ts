@@ -13,7 +13,7 @@ export class ArticlesService {
     return this.apiService.get('/articles');
   }
 
-  getById(id: string): Observable<IArticle> {
+  getById(id: number): Observable<IArticle> {
     return this.apiService.get(`/articles/${id}`);
   }
 }

@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {
   ApiService,
   TagsService,
+  UserService,
   CommentsService,
   ProfilesService,
   ArticlesService,
@@ -18,6 +19,7 @@ import {
   providers: [
     ApiService,
     TagsService,
+    UserService,
     CommentsService,
     ProfilesService,
     ArticlesService,

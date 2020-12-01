@@ -12,7 +12,7 @@ export class ProfilesService {
     return this.apiService.get('/profiles');
   }
 
-  getById(id: string): Observable<IProfile>{
+  getById(id: number): Observable<IProfile>{
     return this.apiService.get(`/profiles/${id}`);
   }
 }

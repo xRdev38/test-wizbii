@@ -18,4 +18,8 @@ export class TagsService {
     return this.apiService.get(`/tags/${id}`);
   }
 
+  filterTags(tags: Array<ITag>, groupId: number[]): Array<ITag> {
+    return tags.filter(tag => groupId.includes(tag.id));
+  }
+
 }
