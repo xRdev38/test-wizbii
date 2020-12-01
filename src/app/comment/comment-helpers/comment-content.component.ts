@@ -1,4 +1,7 @@
 import { Component, Input } from "@angular/core";
+import {
+  IComment
+} from '@app/core';
 
 @Component({
   selector: "app-comment-content",
@@ -6,5 +9,5 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./comment-content.component.css"]
 })
 export class CommentContentComponent {
-  @Input() comment: any;
+  @Input() comment: IComment | null = null;
 }

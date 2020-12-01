@@ -1,11 +1,8 @@
 <ng-container *ngIf="comments">
   <ng-container *ngFor="let comment of comments; trackBy: trackByFn">
   	<div class="comment">
-      <!-- bad -->
-      <ng-container *ngIf="comment.author | async; let author">
-        <app-comment-meta [meta]="author">
-        </app-comment-meta>
-      </ng-container>
+      <app-comment-meta [meta]="comment.author">
+      </app-comment-meta>
   		<div class="comment-content">
   			<app-comment-content [comment]="comment">
   			</app-comment-content>
