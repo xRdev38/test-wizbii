@@ -1,4 +1,4 @@
-<ng-container *ngIf="dataView">
+<ng-container *ngIf="article">
 	<div class="article">
 		<div class="article-head row">
 			<div class="col-md-auto">
@@ -6,8 +6,8 @@
 				</div>
 			</div>
 			<div class="col col">
-        <ng-container *ngIf="dataView.author | async; let profile">
-            <app-article-meta [profile]="profile"></app-article-meta>
+        <ng-container *ngIf="author$ | async; let author">
+          <app-article-meta [author]="author"></app-article-meta>
         </ng-container>
 			</div>
 			<div class="col col-sm-1">
@@ -17,20 +17,20 @@
 			</div>
 		</div>
 		<div class="article-tag">
-      <ng-container *ngIf="dataView.tagList | async; let tags">
+      <ng-container *ngIf="tags$ | async; let tags">
 			  <app-article-tag-list [tags]="tags"></app-article-tag-list>
       </ng-container>
 		</div>
 		<div class="article-content">
-			{{ dataView.body }}
+			{{ article.body }}
 		</div>
 		<div class="article-action">
 			<app-share-button></app-share-button>
 			<app-thanx-button></app-thanx-button>
 		</div>
 		<div class="article-comment">
-      <ng-container *ngIf="dataView.comments | async; let comments">
-        <span>{{ comments.length }} commentaire<ng-container *ngIf="comments.length > 1">s</ng-container></span> - <span>{{ dataView.thanxCount }} thanx</span>
+      <ng-container *ngIf="comments$ | async; let comments">
+        <span>{{ comments.length }} commentaire<ng-container *ngIf="comments.length > 1">s</ng-container></span> - <span>{{ article.thanxCount }} thanx</span>
         <hr class="separator" />
         <app-comment [comments]="comments">
         </app-comment>

@@ -6,10 +6,10 @@
 			<ng-container *ngIf="user$ | async; let user">
 				<app-profile [user]="user"></app-profile>
 			</ng-container>
-			<ng-container *ngFor="let data of dataArticleView$ | async;">
-				<app-article [dataView]="data">
-				</app-article>
-			</ng-container>
+      <ng-container *ngFor="let article of articles$ | async;">
+        <app-article [article]="article">
+        </app-article>
+      </ng-container>
 		</div>
 	</div>
 </div>
