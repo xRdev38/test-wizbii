@@ -1,4 +1,6 @@
-app-article-meta {
+$color-blue: #1ba3e1;
+$grey-color:#9da1a3;
+:host {
   display: block;
 }
 
@@ -12,10 +14,10 @@ app-article-meta {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
-  color: #9da1a3;
+  color: $grey-color;
 }
 
 .profile-name > strong {
   text-transform: uppercase;
-  color: #1ba3e1;
+  color: $color-blue;
 }

@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
 
 import {
   ITag,
 } from '@app/core';
 
 @Component({
-  selector: "app-article-tag-list",
-  templateUrl: "./article-tag-list.component.html",
-  styleUrls: ["./article-tag-list.component.scss"]
+  selector: 'app-article-tag-list',
+  templateUrl: './article-tag-list.component.html',
+  styleUrls: ['./article-tag-list.component.scss']
 })
 export class ArticleTagListComponent implements OnInit {
   @Input() tags: Array<ITag> | null = null;

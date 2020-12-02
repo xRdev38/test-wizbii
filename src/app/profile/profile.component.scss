@@ -1,3 +1,8 @@
+$bg-color:#fff;
+$btn-share-color:#9da1a3;
+$btn-share-icon-color:#d9d9d9;
+$color-blue: #1ba3e1;
+
 :host {
   margin-top: 20px;
   display: block;
@@ -6,7 +11,7 @@
 .header {
   padding: 10px;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: $bg-color;
 }
 
 .header-title {
@@ -14,7 +19,7 @@
   font-weight: bold;
   text-align: center;
   font-size: 24px;
-  color: #1ba3e1;
+  color: $color-blue;
 }
 
 .header-action {
@@ -29,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: #9da1a3;
+  color: $btn-share-color;
 }
 
 .btn-help {
@@ -43,7 +48,7 @@
 .btn-help > i,
 .btn-share-article > i {
   font-size: 36px;
-  color: #d9d9d9;
+  color: $btn-share-icon-color;
 }
 
 .btn-help > span,
@@ -53,10 +58,10 @@
 
 .btn-help:hover,
 .btn-share-article:hover {
-  color: #1ba3e1;
+  color: $color-blue;
 }
 
 .btn-help:hover > i,
 .btn-share-article:hover {
-  color: #1ba3e1;
+  color: $color-blue;
 }

@@ -1,13 +1,13 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 import {
   IProfile
 } from '@app/core';
 
 @Component({
-  selector: "app-comment-meta",
-  templateUrl: "./comment-meta.component.html",
-  styleUrls: ["./comment-meta.component.css"]
+  selector: 'app-comment-meta',
+  templateUrl: './comment-meta.component.html',
+  styleUrls: ['./comment-meta.component.css']
 })
 export class CommentMetaComponent {
   @Input() meta: IProfile | null = null;

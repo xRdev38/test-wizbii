@@ -1,4 +1,4 @@
-import { IProfile } from "./profile.model";
+import { IProfile } from './profile.model';
 
 export interface IComment {
   id: number;

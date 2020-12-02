@@ -19,17 +19,17 @@ describe('ArticlesService', () => {
       articlesService = TestBed.get(ArticlesService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockArticles = {
-        id:"1",
-        description:"Desc",
-        body:"Salut !",
-        tagList:[
-           "1",
-           "2",
-           "3"
+        id: '1',
+        description: 'Desc',
+        body: 'Salut !',
+        tagList: [
+           '1',
+           '2',
+           '3'
         ],
-        createdAt: "2020-11-09T19:20+01:00",
-        updatedAt: "",
-        profile: "666"
+        createdAt: '2020-11-09T19:20+01:00',
+        updatedAt: '',
+        profile: '666'
       };
     });
 
@@ -53,17 +53,17 @@ describe('ArticlesService', () => {
       articlesService = TestBed.get(ArticlesService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockArticles = {
-        id:"4",
-        description:"Description",
-        body:"Bonjour!",
-        tagList:[
-           "5",
-           "2",
-           "3"
+        id: '4',
+        description: 'Description',
+        body: 'Bonjour!',
+        tagList: [
+           '5',
+           '2',
+           '3'
         ],
-        createdAt: "2020-11-19T19:20+01:00",
-        updatedAt: "",
-        profile: "77"
+        createdAt: '2020-11-19T19:20+01:00',
+        updatedAt: '',
+        profile: '77'
       };
     });
 
@@ -76,5 +76,5 @@ describe('ArticlesService', () => {
       request.flush(mockProfiles);
       httpTestingController.verify();
     });
-  })
+  });
 });

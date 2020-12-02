@@ -1,12 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { ShareButtonComponent, ThanxButtonComponent } from "./buttons";
+import { ShareButtonComponent, ThanxButtonComponent } from './buttons';
 import {
   ArticleTagListComponent,
   ArticleMetaComponent,
   HashtagPipe
-} from "./article-helpers";
+} from './article-helpers';
 
 @NgModule({
   imports: [CommonModule],

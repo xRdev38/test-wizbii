@@ -19,11 +19,11 @@ describe('ProfilesService', () => {
       profilesService = TestBed.get(ProfilesService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockProfiles = {
-        id: "666",
-        firstname:"Serge",
-        lastname:"Koutoan",
-        desc:"my bio",
-        image:"/image/avatar.jpg"
+        id: '666',
+        firstname: 'Serge',
+        lastname: 'Koutoan',
+        desc: 'my bio',
+        image: '/image/avatar.jpg'
       };
     });
 
@@ -47,11 +47,11 @@ describe('ProfilesService', () => {
       profilesService = TestBed.get(ProfilesService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockProfiles = {
-        id: "55",
-        firstname: "Léa",
-        lastname: "Beli",
-        desc: "my bio",
-        image: "/image/avatar.jpg"
+        id: '55',
+        firstname: 'Léa',
+        lastname: 'Beli',
+        desc: 'my bio',
+        image: '/image/avatar.jpg'
       };
     });
 
@@ -64,5 +64,5 @@ describe('ProfilesService', () => {
       request.flush(mockProfiles);
       httpTestingController.verify();
     });
-  })
+  });
 });

@@ -6,7 +6,7 @@ import { ITag } from '@app/core/models';
 
 @Injectable()
 export class TagsService {
-  constructor (
+  constructor(
     private apiService: ApiService
   ) {}
 

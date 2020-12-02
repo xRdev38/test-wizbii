@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import {
   IUser
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     private commentsService: CommentsService
   ){}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.user$ = this.userService.getUser(1);
     this.dataArticleView$ = this.articlesService
     .getAll()
@@ -64,18 +64,18 @@ export class AppComponent implements OnInit {
                     ...comment,
                     author: this.profilesService.getById(comment.profileId)
                   };
-                })
+                });
               })
             ),
             author: this.profilesService.getById(article.profileId)
             .pipe( map( profile => {
                 return {
                   ...profile,
-                  createdAt: article.createdAt ? article.createdAt : ""
+                  createdAt: article.createdAt ? article.createdAt : ''
                 };
               })
             )
-          }
+          };
         });
       }),
     );

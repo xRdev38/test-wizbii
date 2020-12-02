@@ -1,13 +1,13 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { CommentComponent } from "./comment.component";
+import { CommentComponent } from './comment.component';
 
 import {
   CommentMetaComponent,
   CommentContentComponent,
   CommentFormComponent
-} from "./comment-helpers";
+} from './comment-helpers';
 
 @NgModule({
   imports: [CommonModule],

@@ -1,12 +1,12 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: "app-thanx-button",
-  templateUrl: "./thanx-button.component.html",
-  styleUrls: ["./thanx-button.component.scss"]
+  selector: 'app-thanx-button',
+  templateUrl: './thanx-button.component.html',
+  styleUrls: ['./thanx-button.component.scss']
 })
 export class ThanxButtonComponent {
-  @Input() label: string = "Envoyez un thanx !";
+  @Input() label = 'Envoyez un thanx !';
   @Output() shared = new EventEmitter<boolean>();
   isSubmitting = false;
 

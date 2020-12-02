@@ -1,12 +1,12 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input } from '@angular/core';
 import {
   IComment
 } from '@app/core';
 
 @Component({
-  selector: "app-comment-content",
-  templateUrl: "./comment-content.component.html",
-  styleUrls: ["./comment-content.component.css"]
+  selector: 'app-comment-content',
+  templateUrl: './comment-content.component.html',
+  styleUrls: ['./comment-content.component.css']
 })
 export class CommentContentComponent {
   @Input() comment: IComment | null = null;

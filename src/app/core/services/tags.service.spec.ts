@@ -20,7 +20,7 @@ describe('TagsService', () => {
       httpTestingController = TestBed.get(HttpTestingController);
       mockTags = {
           id: 1,
-          tagName:"finance"
+          tagName: 'finance'
       };
     });
 
@@ -45,7 +45,7 @@ describe('TagsService', () => {
       httpTestingController = TestBed.get(HttpTestingController);
       mockTags = {
           id: 2,
-          tagName:"contrôle de gestion"
+          tagName: 'contrôle de gestion'
       };
     });
 
@@ -58,5 +58,5 @@ describe('TagsService', () => {
       request.flush(mockTags);
       httpTestingController.verify();
     });
-  })
+  });
 });

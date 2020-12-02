@@ -19,10 +19,10 @@ describe('CommentsService', () => {
       commentsService = TestBed.get(CommentsService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockComments = {
-        id: "1",
-        body: "Bonjour...",
-        createdAt:"2020-11-09T19:20+01:00",
-        profile:"55",
+        id: '1',
+        body: 'Bonjour...',
+        createdAt: '2020-11-09T19:20+01:00',
+        profile: '55',
         thanx: true,
         thanxCount: 1
       };
@@ -48,10 +48,10 @@ describe('CommentsService', () => {
       commentsService = TestBed.get(CommentsService);
       httpTestingController = TestBed.get(HttpTestingController);
       mockComments = {
-        id: "2",
-        body: "Bonjour...",
-        createdAt:"2020-11-09T19:20+01:00",
-        profile:"565",
+        id: '2',
+        body: 'Bonjour...',
+        createdAt: '2020-11-09T19:20+01:00',
+        profile: '565',
         thanx: true,
         thanxCount: 0
       };
@@ -66,5 +66,5 @@ describe('CommentsService', () => {
       request.flush(mockProfiles);
       httpTestingController.verify();
     });
-  })
+  });
 });

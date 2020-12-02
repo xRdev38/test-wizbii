@@ -1,27 +1,27 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { DomSanitizer } from "@angular/platform-browser";
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
-@Pipe({ name: "hashtag" })
+@Pipe({ name: 'hashtag' })
 export class HashtagPipe implements PipeTransform {
-  hashColor = "#545d61";
+  hashColor = '#545d61';
 
   constructor(private sanitizer: DomSanitizer) {}
 
   transform(text: any, color?: string): any {
-    let newValue: string = "";
+    let newValue = '';
     let result: any = [];
     let tempString: string;
     const newText = text.split(/\s+/);
-    const mentions = newText.filter( (el: string) => el[0] === "#" || el[0] === "@");
+    const mentions = newText.filter( (el: string) => el[0] === '#' || el[0] === '@');
     for (const [index, value] of newText.entries()) {
       for (const mention of mentions) {
         if (
           value === mention ||
-          value === mention + "." ||
+          value === mention + '.' ||
           // tslint:disable-next-line: quotemark
           value === mention + "'s"
         ) {
-          newValue = newText.length > 1 ? newText.join(" ") : value;
+          newValue = newText.length > 1 ? newText.join(' ') : value;
           newText.splice(
             index,
             1,
@@ -33,7 +33,7 @@ export class HashtagPipe implements PipeTransform {
         }
       }
     }
-    tempString = result.join(" ");
+    tempString = result.join(' ');
     return this.sanitizer.bypassSecurityTrustHtml(tempString);
   }
 }
