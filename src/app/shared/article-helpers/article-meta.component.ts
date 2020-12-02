@@ -8,8 +8,8 @@ import { IProfileView } from './profile-view.interface';
   styleUrls: ['./article-meta.component.scss']
 })
 export class ArticleMetaComponent {
-  @Input() profile: IProfileView = {
-    id: '',
+  @Input() author: IProfileView = {
+    id: 0,
     firstname: '',
     lastname: '',
     desc: '',

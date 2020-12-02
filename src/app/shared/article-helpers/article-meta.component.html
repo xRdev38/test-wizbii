@@ -1,16 +1,16 @@
-<ng-container *ngIf="profile">
+<ng-container *ngIf="author">
 	<div class="profile">
 		<div class="avatar">
-			<img [src]="profile.image"
+			<img [src]="author.image"
   />
     </div>
 			<div class="profile-desc">
 				<div class="profile-name">
-					<strong>{{ profile.firstname}} {{ profile.lastname }}</strong>
-					- <span>il y a {{ profile.createdAt | date:'H'}} heures</span>
+					<strong>{{ author.firstname}} {{ author.lastname }}</strong>
+					- <span>il y a {{ author.createdAt | date:'H'}} heures</span>
 				</div>
 				<div class="profile-info">
-					{{ profile.desc }}
+					{{ author.desc }}
 				</div>
 			</div>
 		</div>
