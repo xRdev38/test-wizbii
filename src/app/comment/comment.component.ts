@@ -16,12 +16,12 @@ export class CommentComponent implements OnInit {
 
   constructor(private profilesService: ProfilesService){}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getAuthor();
   }
 
-  getAuthor():void {
-    if( this.comments !== null ) {
+  getAuthor(): void {
+    if ( this.comments !== null ) {
       this.authors = this.comments !== null ? this.comments.map( comment => {
         return this.profilesService.getById(comment.profileId);
       }) : null;

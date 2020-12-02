@@ -40,18 +40,18 @@ export class ArticleComponent implements OnInit {
   }
 
   createTags(): void {
-    if( this.article !== null ) {
+    if ( this.article !== null ) {
       this.tags$ = this.tagsService.getAll()
         .pipe(
             map( tag => {
                 return this.article !== null ? this.tagsService.filterTags(tag, this.article.tagList) : [];
             })
-        )
+        );
     }
   }
 
   createAuthor(): void {
-    if( this.article !== null ) {
+    if ( this.article !== null ) {
       this.author$ = this.profilesService.getById(this.article.profileId)
         .pipe( map( profile => {
             return {
@@ -59,12 +59,12 @@ export class ArticleComponent implements OnInit {
               createdAt: this.article?.createdAt ? this.article.createdAt : ''
             };
           })
-        )
+        );
     }
   }
 
   createComments(): void {
-    if( this.article !== null ) {
+    if ( this.article !== null ) {
       this.comments$ = this.commentsService.getAll().pipe(
         map( comments => {
           return this.article !== null ? this.commentsService.filterComments(comments, this.article.id) : [];
