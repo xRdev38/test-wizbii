@@ -1,16 +1,34 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import { ICommentView } from '@app/comment/comment-view.interface';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+import { IProfile, IComment, ProfilesService } from '@app/core';
 
 @Component({
   selector: 'app-comment',
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.scss']
 })
-export class CommentComponent {
-  @Input() comments: Array<ICommentView> | null = null;
+export class CommentComponent implements OnInit {
+  @Input() comments: Array<IComment> | null = null;
+  authors: Array<Observable<IProfile>> | null = null;
 
-  trackByFn(index: number, comment: ICommentView) {
+  constructor(private profilesService: ProfilesService){}
+
+  ngOnInit():void {
+    this.getAuthor();
+  }
+
+  getAuthor():void {
+    if( this.comments !== null ) {
+      this.authors = this.comments !== null ? this.comments.map( comment => {
+        return this.profilesService.getById(comment.profileId);
+      }) : null;
+    }
+  }
+
+  trackByFn(index: number, comment: IComment) {
     return comment.id;
   }
 }
