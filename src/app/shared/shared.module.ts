@@ -18,7 +18,6 @@ import {
     HashtagPipe
   ],
   exports: [
-    CommonModule,
     ShareButtonComponent,
     ThanxButtonComponent,
     ArticleTagListComponent,

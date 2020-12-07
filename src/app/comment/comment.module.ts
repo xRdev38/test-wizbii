@@ -18,7 +18,6 @@ import {
     CommentFormComponent
   ],
   exports: [
-    CommonModule,
     CommentComponent,
     CommentMetaComponent,
     CommentContentComponent,

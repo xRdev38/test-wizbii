@@ -21,7 +21,7 @@ export class CommentComponent implements OnInit {
   }
 
   getAuthor(): void {
-    if ( this.comments !== null ) {
+    if( this.comments !== null ) {
       this.authors = this.comments !== null ? this.comments.map( comment => {
         return this.profilesService.getById(comment.profileId);
       }) : null;
