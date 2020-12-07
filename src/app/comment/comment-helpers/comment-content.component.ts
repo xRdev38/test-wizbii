@@ -6,7 +6,7 @@ import {
 @Component({
   selector: 'app-comment-content',
   templateUrl: './comment-content.component.html',
-  styleUrls: ['./comment-content.component.css']
+  styleUrls: ['./comment-content.component.scss']
 })
 export class CommentContentComponent {
   @Input() comment: IComment | null = null;
